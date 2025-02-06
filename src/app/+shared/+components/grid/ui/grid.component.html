@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        @for (item of columns; track $index) {
+            <th>{{item.title}}</th>
+        }
+        <th></th>
+
+    </tr>
+    @for (row of data; track $index) {
+        <tr>
+            @for (col of columns; track $index) {
+                <td>{{row[col.field]}}</td>
+            }
+            <td>
+                <button mat-raised-button>ویرایش</button>
+                <button mat-raised-button>حذف</button>
+            </td>
+        </tr>
+    }
+</table>

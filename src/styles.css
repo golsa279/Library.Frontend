@@ -4,7 +4,7 @@
     src: url('/fonts/persian.woff2');
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Persian }
+body {margin: 0; font-family: Persian }
 
 *{
     font-family: Persian;

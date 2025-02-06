@@ -3,8 +3,8 @@ import { AuthComponent } from './+pages/auth/ui/auth.component';
 import { AdminsComponent } from './+pages/admins/admins.component';
 import { adminsGuard } from './+shared/+services/guards/admins.guard';
 import { BooksComponent } from './+pages/books/ui/books.component';
-import { MembersComponent } from './+pages/members/members.component';
-import { BorrowsComponent } from './+pages/borrows/borrows.component';
+import { MembersComponent } from './+pages/members/ui/members.component';
+import { BorrowsComponent } from './+pages/borrows/ui/borrows.component';
 import { DashboardComponent } from './+pages/dashboard/dashboard.component';
 
 export const routes: Routes = [
