@@ -72,8 +72,7 @@ export class AuthComponent {
         }
         else if (res['accessToken']){
             const response=res as AuthOkResponse;
-            this.auth.accessToken=response.accessToken;
-            this.auth.refreshToken=response.refreshToken;
+            this.auth.setToken(response.accessToken,response.refreshToken);
             this.router.navigateByUrl('/admins');
         }
         console.log('Ok');

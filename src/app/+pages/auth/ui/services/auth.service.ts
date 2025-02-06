@@ -11,6 +11,16 @@ export class AuthService {
   login(data:AuthRequest){
     return this.backend.post('api/security/login',data);
   }
-  accessToken:string|undefined;
-  refreshToken:string|undefined;
+  setToken(accessToken:string,refreshToken:string){
+    sessionStorage.setItem('accessToken',accessToken);
+    sessionStorage.setItem('refreshToken',refreshToken);
+  }
+  unsetToken(){
+    sessionStorage.removeItem('accessToken');
+    sessionStorage.removeItem('refreshToken');
+  }
+  isSignIn(){
+    return sessionStorage.getItem('accessToken')!=undefined;
+  }
+  
 }

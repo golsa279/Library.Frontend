@@ -1,0 +1,19 @@
+@if (busy) {
+    <div>لطفا کمی صبر کنید</div>
+}
+@if (data){
+    <table>
+        <tr>
+            <th>عنوان</th>
+            <th>نویسنده</th>
+            <th>قیمت</th>
+        </tr>
+        @for (item of data; track $index) {
+            <tr>
+                <td>{{item.title}}</td>
+                <td>{{item.writer}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+        }
+    </table>
+}
