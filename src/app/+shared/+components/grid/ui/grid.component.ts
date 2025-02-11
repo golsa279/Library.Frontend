@@ -18,7 +18,7 @@ PersianDatePipe
   templateUrl: './grid.component.html',
   styleUrl: './grid.component.css'
 })
-export class GridComponent<TAddRequest,TEditRequest,TService> extends CrudService<TAddRequest,TEditRequest> {
+export class GridComponent {
 
   @Input() data: any[] | undefined;
   @Input() columns: GridColumn[] | undefined;
@@ -28,9 +28,6 @@ export class GridComponent<TAddRequest,TEditRequest,TService> extends CrudServic
   @Output() onRemove = new EventEmitter<any>();
   @Output() refresh = new EventEmitter<GridRequest>;
   @Output() select = new EventEmitter<any>;
-  service:TService|undefined;
-  @Input() id: number = 0;
-  current:any={};
   page = 0;
   size = 5;
   keyword: string = '';
@@ -59,8 +56,4 @@ export class GridComponent<TAddRequest,TEditRequest,TService> extends CrudServic
     }
     this.refresh.emit(request);
   }
-  /*delete(){
-    return this.service?.remove(this.id);
-  }
-  */
 }

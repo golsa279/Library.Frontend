@@ -9,6 +9,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { BorrowEditRequest } from '../models/borrowEditRequest';
 import { MatButtonModule } from '@angular/material/button';
 import { BorrowDetailsComponent } from "./borrow-details/ui/borrow-details.component";
+import { BorrowRemoveRequest } from '../models/borrowRemoveRequest';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { BorrowDetailsComponent } from "./borrow-details/ui/borrow-details.compo
   templateUrl: './borrows.component.html',
   styleUrl: './borrows.component.css'
 })
-export class BorrowsComponent extends CrudComponent<BorrowAddRequest, BorrowEditRequest, BorrowResponse, BorrowsService> {
+export class BorrowsComponent extends CrudComponent<BorrowAddRequest, BorrowEditRequest, BorrowRemoveRequest, BorrowResponse, BorrowsService> {
   override service=inject(BorrowsService);
   columns: GridColumn[] = [
     { field: 'borrowtime', title: 'تاریخ امانت',type:'date' },

@@ -7,11 +7,10 @@ import { GridRequest } from "../+components/grid/models/grid-request";
   selector:'app-crud',
   template:''
 })
-export class CrudComponent<TAddRequest,TEditRequest,TResponse,TService extends CrudService<TAddRequest,TEditRequest>> {
+export class CrudComponent<TAddRequest,TEditRequest, TRemoveRequest,TResponse,TService extends CrudService<TAddRequest,TEditRequest, TRemoveRequest>> {
     @Input() selectable:boolean=false;
     @Input() id: number = 0;
     @Output() select=new EventEmitter<any>();
-    @Output() onRemove=new EventEmitter<any>();
     service:TService|undefined;
     data:TResponse[]|undefined;
     busy=false;
@@ -36,6 +35,10 @@ export class CrudComponent<TAddRequest,TEditRequest,TResponse,TService extends C
     cancel(){
       this.action='list';
       this.reload();
+    }
+    remove(data:any){
+      this.current=data;
+      this.action='remove';
     }
 
 }

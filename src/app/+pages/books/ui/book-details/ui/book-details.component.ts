@@ -9,6 +9,7 @@ import { DetailsComponent } from '../../../../../+shared/+base/details-component
 import { BookAddRequest } from '../../models/bookAddRequest';
 import { BookEditRequest } from '../../models/bookEditRequest';
 import { BooksService } from '../../services/books.service';
+import { BookRemoveRequest } from '../../models/bookRemoveRequest';
 
 
 
@@ -26,11 +27,16 @@ import { BooksService } from '../../services/books.service';
     ReactiveFormsModule
   ]
 })
-export class BookDetailsComponent extends DetailsComponent<BookAddRequest, BookEditRequest, BooksService>{
+export class BookDetailsComponent extends DetailsComponent<BookAddRequest, BookEditRequest, BookRemoveRequest, BooksService>{
   override initForm(): void {
     console.log(this.initial);
     if (this.action != 'add' && this.initial){
       this.bookForm.setValue(this.initial);
+    }
+    if (this.action == 'remove'){
+      this.bookForm.controls.title.disable();
+      this.bookForm.controls.writer.disable();
+      this.bookForm.controls.price.disable();
     }
   }
   override service = inject(BooksService);

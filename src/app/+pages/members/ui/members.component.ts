@@ -9,6 +9,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MemberEditRequest } from '../models/memberEditRequest';
 import { MatButtonModule } from '@angular/material/button';
 import { MemberDetailsComponent } from "./member-details/ui/member-details.component";
+import { MemberRemoveRequest } from '../models/memberRemoveRequest';
 
 @Component({
   selector: 'app-members',
@@ -16,7 +17,7 @@ import { MemberDetailsComponent } from "./member-details/ui/member-details.compo
   templateUrl: './members.component.html',
   styleUrl: './members.component.css'
 })
-export class MembersComponent extends CrudComponent<MemberAddRequest,MemberEditRequest, MemberResponse, MembersService> implements OnInit {
+export class MembersComponent extends CrudComponent<MemberAddRequest,MemberEditRequest, MemberRemoveRequest, MemberResponse, MembersService> implements OnInit {
   override service=inject(MembersService);
   columns: GridColumn[] = [
     { field: 'fullname', title: 'نام و نام خانوادگی' },

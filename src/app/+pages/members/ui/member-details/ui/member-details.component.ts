@@ -11,6 +11,7 @@ import { MemberAddRequest } from '../../../models/memberAddRequest';
 import { MemberEditRequest } from '../../../models/memberEditRequest';
 import { MembersService } from '../../../services/members.service';
 import { MembersComponent } from "../../members.component";
+import { MemberRemoveRequest } from '../../../models/memberRemoveRequest';
 
 
 @Component({
@@ -27,7 +28,7 @@ import { MembersComponent } from "../../members.component";
     ReactiveFormsModule,
 ]
 })
-export class MemberDetailsComponent extends DetailsComponent<MemberAddRequest, MemberEditRequest, MembersService>{
+export class MemberDetailsComponent extends DetailsComponent<MemberAddRequest, MemberEditRequest,MemberRemoveRequest, MembersService>{
   override initForm(): void {
     console.log(this.initial);
     if (this.action != 'add' && this.initial){

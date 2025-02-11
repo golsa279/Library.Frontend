@@ -12,6 +12,7 @@ import { BorrowEditRequest } from '../../../models/borrowEditRequest';
 import { BorrowsService } from '../../../services/borrows.service';
 import { MembersComponent } from "../../../../members/ui/members.component";
 import { BooksComponent } from "../../../../books/ui/books.component";
+import { BorrowRemoveRequest } from '../../../models/borrowRemoveRequest';
 
 
 @Component({
@@ -30,7 +31,7 @@ import { BooksComponent } from "../../../../books/ui/books.component";
     BooksComponent
   ]
 })
-export class BorrowDetailsComponent extends DetailsComponent<BorrowAddRequest, BorrowEditRequest, BorrowsService> {
+export class BorrowDetailsComponent extends DetailsComponent<BorrowAddRequest, BorrowEditRequest, BorrowRemoveRequest, BorrowsService> {
   bookSelect($event: any) {
     this.borrowForm.controls.bookId.setValue($event.id);
   }

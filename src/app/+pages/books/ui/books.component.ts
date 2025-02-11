@@ -10,6 +10,7 @@ import { BookAddRequest } from './models/bookAddRequest';
 import { BookResponse } from './models/bookResponse';
 import {MatButtonModule} from '@angular/material/button';
 import { BookDetailsComponent } from './book-details/ui/book-details.component';
+import { BookRemoveRequest } from './models/bookRemoveRequest';
 
 @Component({
   selector: 'app-books',
@@ -17,7 +18,7 @@ import { BookDetailsComponent } from './book-details/ui/book-details.component';
   templateUrl: './books.component.html',
   styleUrl: './books.component.css'
 })
-export class BooksComponent extends CrudComponent<BookAddRequest,BookEditRequest, BookResponse, BooksService> implements OnInit {
+export class BooksComponent extends CrudComponent<BookAddRequest,BookEditRequest, BookRemoveRequest, BookResponse, BooksService> implements OnInit {
   override service=inject(BooksService);
   columns: GridColumn[] = [
     { field: 'title', title: 'عنوان' },
