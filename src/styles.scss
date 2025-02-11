@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+
 @font-face {
     font-family: Persian;
     src: url('/fonts/persian.woff2');
 }
-html, body { height: 100%; }
+
 body {margin: 0; font-family: Persian }
 
 *{
@@ -18,3 +21,22 @@ body {margin: 0; font-family: Persian }
 
 }
   
+
+body { margin: 0; font-family: Persian, "Persian", sans-serif; }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Persian; }
+
+html {
+    @include mat.theme((
+      typography: Persian,
+      density: 0
+    ));
+  }
+.actions {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+

@@ -7,7 +7,7 @@
 }
 .login{
     background: white;
-    padding: 2em;
+    padding: 2.5em;
     border-radius: 0.5em;
 
 }
@@ -17,6 +17,10 @@
 }
 .b1{
     width: 100%;
-    background-color: rgb(83, 152, 255);
+    background-color:#1e4b8f;
     color: white;
+}
+.head{
+    margin: 10px;
+    text-align: center;  
 }

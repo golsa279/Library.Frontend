@@ -1,4 +1,4 @@
-export interface BorrowRequest{
+export interface BorrowAddRequest{
     bookId:number;
     memberId:number;
 }

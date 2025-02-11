@@ -1,5 +1,14 @@
+<div>
+    <mat-form-field>
+        <mat-label>کلیدواژه</mat-label>
+        <input [(ngModel)]="keyword" (ngModelChange)="keywordChange()" type="text" matInput placeholder="جستجو">
+    </mat-form-field>
+</div>
 <table>
     <tr>
+        @if (selectable) {
+            <th></th>
+        }
         @for (item of columns; track $index) {
             <th>{{item.title}}</th>
         }
@@ -8,13 +17,39 @@
     </tr>
     @for (row of data; track $index) {
         <tr>
-            @for (col of columns; track $index) {
-                <td>{{row[col.field]}}</td>
+            @if (selectable){
+                <td>
+                    <button type="button" (click)="select.emit(row)" mat-raised-button>انتخاب</button>
+                </td>
+            }
+            @for (col of columns; track $index)
+            {
+                @if (col.type=='date')
+                {
+                    <td>{{ row[col.field] | persianDate }}</td>
+                }
+                @else
+                {
+                    <td>{{row | extractData:col.field}}</td>
+                }
+                
             }
             <td>
-                <button mat-raised-button>ویرایش</button>
-                <button mat-raised-button>حذف</button>
+                <button type="button" (click)="onEdit.emit(row)" mat-raised-button>{{editTitle}}</button>
+                <button type="button"  mat-raised-button>حذف</button>
             </td>
         </tr>
     }
 </table>
+<div>
+    <button [disabled]="page==0" (click)="prev()" mat-flat-button>قبلی</button>
+    <button [disabled]="(data?.length??0)<size" (click)="next()" mat-flat-button>بعدی</button>
+    <mat-form-field>
+        <mat-label>تعداد</mat-label>
+        <select [(ngModel)]="size" (ngModelChange)="pageChange()" matNativeControl required title="size">
+          <option>5</option>
+          <option>10</option>
+          <option>20</option>
+        </select>
+      </mat-form-field>
+</div>

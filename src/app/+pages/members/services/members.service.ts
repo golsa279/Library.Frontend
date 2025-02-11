@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { CrudService } from '../../../+shared/+base/crud-service';
-import { MemberRequest } from '../models/membersRequest';
+import { MemberAddRequest} from '../models/memberAddRequest';
+import { MemberEditRequest } from '../models/memberEditRequest';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MembersService extends CrudService<MemberRequest> {
+export class MembersService extends CrudService<MemberAddRequest,MemberEditRequest> {
   override apiName: string='members';
 }

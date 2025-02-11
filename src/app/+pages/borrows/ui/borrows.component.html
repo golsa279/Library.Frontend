@@ -1,7 +1,15 @@
-@if (busy) {
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    <div>لطفا کمی صبر کنید</div>
+@if (action=='list'){
+    @if (busy) {
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
+    }
+    <div  class="actions">
+        <button (click)="add()" mat-flat-button >افزودن</button>
+    </div>
+    @if (data) {
+    <app-grid [editTitle]="'بازگشت'" (refresh)="reload($event)" [data]="data" [columns]="columns" (onEdit)="edit($event)"></app-grid>
+    }
 }
-@if (data) {
-<app-grid [data]="data" [columns]="columns"></app-grid>
+@else {
+    <app-borrow-details [id]="current.id" [action]="action" (onCancel)="cancel()"></app-borrow-details>
 }
