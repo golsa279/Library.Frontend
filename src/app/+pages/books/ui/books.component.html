@@ -8,7 +8,7 @@
     </div>
     @if (data) {
         <app-grid (select)="select.emit($event)" [selectable]="selectable" (refresh)="reload($event)" (onEdit)="edit($event)"  [data]="data" [columns]="columns"></app-grid>
-    }   
+    }
 }
 @else {
     <app-book-details [id]="current.id" [action]="action" (onCancel)="cancel()"></app-book-details>

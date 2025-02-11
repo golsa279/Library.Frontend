@@ -32,9 +32,6 @@ export class DetailsComponent<TAddRequest, TEditRequest, TService extends CrudSe
             let editData = data as TEditRequest;
             return this.service?.edit(this.id, editData);
         }
-        else if (this.action == 'remove') {
-            return this.service?.remove(this.id);
-        }
         return undefined;
     }
 }
