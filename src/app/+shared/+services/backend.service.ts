@@ -20,7 +20,6 @@ export class BackendService {
   }
   delete(api:string) {
     return this.http.delete(environment.apiUrl+api);
-
   }
 
 }
