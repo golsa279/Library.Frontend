@@ -1,0 +1,16 @@
+@if (action=='list'){
+    @if (busy) {
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        
+    }
+    <div  class="actions">
+        <button (click)="add()" mat-flat-button >افزودن</button>
+    </div>
+    @if (data) {
+        <app-grid (select)="select.emit($event)" [selectable]="selectable" (refresh)="reload($event)" (onEdit)="edit($event)" (onRemove)="remove($event)" [data]="data" [columns]="columns"></app-grid>
+    }
+}
+@else {
+    <app-librarian-details [id]="current.id" [action]="action" (onCancel)="cancel()"></app-librarian-details>
+}
+

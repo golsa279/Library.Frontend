@@ -6,6 +6,7 @@ import { BooksComponent } from './+pages/books/ui/books.component';
 import { MembersComponent } from './+pages/members/ui/members.component';
 import { BorrowsComponent } from './+pages/borrows/ui/borrows.component';
 import { DashboardComponent } from './+pages/dashboard/dashboard.component';
+import { LibrariansComponent } from './+pages/librarians/ui/librarians.component';
 
 export const routes: Routes = [
     {path:'login',component:AuthComponent},
@@ -14,6 +15,7 @@ export const routes: Routes = [
         {path:'members',component:MembersComponent},
         {path:'borrows',component:BorrowsComponent},
         {path:'dashboard',component:DashboardComponent},
+        {path:'librarians',component:LibrariansComponent},
         {path:'',redirectTo:'dashboard',pathMatch:'prefix'}
     ]},
     {path:'',redirectTo:'login',pathMatch:'full'},
