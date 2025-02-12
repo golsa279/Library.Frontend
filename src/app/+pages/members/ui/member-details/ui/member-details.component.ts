@@ -12,6 +12,7 @@ import { MemberEditRequest } from '../../../models/memberEditRequest';
 import { MembersService } from '../../../services/members.service';
 import { MembersComponent } from "../../members.component";
 import { MemberRemoveRequest } from '../../../models/memberRemoveRequest';
+import { MemberResponse } from '../../../models/memberResponse';
 
 
 @Component({
@@ -33,6 +34,11 @@ export class MemberDetailsComponent extends DetailsComponent<MemberAddRequest, M
     console.log(this.initial);
     if (this.action != 'add' && this.initial){
       this.memberForm.setValue(this.initial);
+    }
+    if (this.action == 'remove'){
+      this.memberForm.controls.fullname.disable();
+      this.memberForm.controls.address.disable();
+      this.memberForm.controls.phone.disable();
     }
   }
   override service = inject(MembersService);

@@ -46,6 +46,10 @@ export class BorrowDetailsComponent extends DetailsComponent<BorrowAddRequest, B
         this.borrowForm.controls.bookId.disable();
         this.borrowForm.controls.memberId.disable();
       }
+      if(this.action=='remove'){
+        this.borrowForm.controls.bookId.disable();
+        this.borrowForm.controls.memberId.disable();
+      }
     }
   }
   override service = inject(BorrowsService);

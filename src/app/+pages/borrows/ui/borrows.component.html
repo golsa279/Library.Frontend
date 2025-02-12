@@ -7,7 +7,7 @@
         <button (click)="add()" mat-flat-button >افزودن</button>
     </div>
     @if (data) {
-    <app-grid [editTitle]="'بازگشت'" (refresh)="reload($event)" [data]="data" [columns]="columns" (onEdit)="edit($event)"></app-grid>
+    <app-grid [editTitle]="'بازگشت'" (refresh)="reload($event)" [data]="data" [columns]="columns" (onEdit)="edit($event)" (onRemove)="remove($event)"></app-grid>
     }
 }
 @else {
