@@ -21,7 +21,7 @@ import { BorrowRemoveRequest } from '../models/borrowRemoveRequest';
 export class BorrowsComponent extends CrudComponent<BorrowAddRequest, BorrowEditRequest, BorrowRemoveRequest, BorrowResponse, BorrowsService> {
   override service=inject(BorrowsService);
   columns: GridColumn[] = [
-    { field: 'borrowtime', title: 'تاریخ امانت',type:'date' },
+    { field: 'borrowTime', title: 'تاریخ امانت',type:'date' },
     //{ field: 'bookId', title: 'شناسه کتاب' },
     { field: 'book.title', title: 'عنوان کتاب' },
     //{ field: 'memberId', title: 'شناسه عضو' },
