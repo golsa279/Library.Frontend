@@ -5,11 +5,11 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>مدیریت کتابخانه</mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink="dashboard">داشبورد</a>
+      <a mat-list-item routerLink="librarians">کتابداران</a>
       <a class="r" mat-list-item routerLink="books">کتابها</a>
       <a mat-list-item routerLink="members">اعضا</a>
       <a mat-list-item routerLink="borrows">امانات</a>
-      <a mat-list-item routerLink="librarians">کتابداران</a>
-      <a mat-list-item routerLink="dashboard">خانه</a>
       <a mat-list-item (click)="signout()">خروج</a>
     </mat-nav-list>
   </mat-sidenav>

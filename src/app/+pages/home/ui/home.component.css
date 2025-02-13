@@ -1,0 +1,28 @@
+.bar{
+    display: block;
+    width: auto;
+    background-color: rgba(0, 0, 255, 0.173);
+    height: 150px;
+}
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td, table th {
+    border: 1px solid #4591ef;
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even){background-color: #e9e8e8;}
+  
+  table tr:hover {background-color: #e5d2bf95;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1e4b8f;
+    color: white;
+  }
