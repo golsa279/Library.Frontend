@@ -1,39 +1,62 @@
-<div class="bar">
-  <div>
-    <mat-form-field>
-      <mat-label>کلیدواژه</mat-label>
-      <input [(ngModel)]="keyword" (ngModelChange)="keywordChange()" type="text" matInput placeholder="جستجو کتاب، نویسنده  ">
+<div class="menu">
+  <div class="bar">
+    <img class="icon" src="assets\book-svgrepo-com.svg" alt="book">
+    <button mat-button class="login" [matMenuTriggerFor]="menu">ورود</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="Librarian()">کتابداران</button>
+      <button mat-menu-item (click)="Manager()">مدیر</button>
+    </mat-menu>
+    <mat-form-field class="search">
+      <mat-label><img src="assets\magnifier-glass-svgrepo-com.svg" alt="magnifier" width="20" height="20">جستجو کتاب،
+        نویسنده، دسته</mat-label>
+      <input [(ngModel)]="keyword" (ngModelChange)="keywordChange()" type="text" matInput>
     </mat-form-field>
   </div>
-  <button mat-button [matMenuTriggerFor]="menu">ورود</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="Librarian()">کتابداران</button>
-    <button mat-menu-item (click)="Manager()">مدیر</button>
-  </mat-menu>
 </div>
+
 @if (busy) {
-  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
 }
+<!--
+    @if (data) {
+      <div class="container">
+      @for (item of data; track $index) {
+          <div class="window">
+            <div><img src="assets\pride.jpg" alt="book" width="150" height="200"></div>
+            <div>
+              <div class="title"><p>عنوان: </p>{{item.title}}</div>
+              <div class="writer"><p>نویسنده: </p>{{item.writer}}</div>
+            </div>
+          </div>
+      }
+      </div>
+    }
+      -->
 @if (data) {
-<table>
-  <tr>
-    <th>عنوان کتاب</th>
-    <th>نویسنده</th>
-    <th>قیمت</th>
-  </tr>
-  @for (item of data; track $index) {
-  <tr>
-    <td>{{item.title}}</td>
-    <td>{{item.writer}}</td>
-    <td>{{item.price}}</td>
-  </tr>
-  }
-</table>
-}
-<div>
+<div class="data">
+  <table>
+    <tr>
+      <th>تصویر</th>
+      <th>عنوان کتاب</th>
+      <th>نویسنده</th>
+      <th>قیمت</th>
+      <th>دسته بندی</th>
+    </tr>
+    @for (item of data; track $index) {
+    <tr>
+      <td><img src="assets\d684d96f-7e6b-4dfd-b6c3-a9c3b9136db5.jpg" alt="book" width="150" height="150"></td>
+      <td>{{item.title}}</td>
+      <td>{{item.writer}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.Category}}</td>
+    </tr>
+    }
+  </table>
+</div>
+<div class="button">
   <button [disabled]="page==0" (click)="prev()" mat-flat-button>قبلی</button>
-  <button [disabled]="(data?.length??0)<size" (click)="next()" mat-flat-button>بعدی</button>
-  <mat-form-field>
+  <button [disabled]="(data.length)<size" (click)="next()" mat-flat-button>بعدی</button>
+  <mat-form-field class="page">
     <mat-label>تعداد</mat-label>
     <select [(ngModel)]="size" (ngModelChange)="pageChange()" matNativeControl required title="size">
       <option>5</option>
@@ -42,3 +65,7 @@
     </select>
   </mat-form-field>
 </div>
+}
+
+ 
+  

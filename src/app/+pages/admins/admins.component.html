@@ -5,12 +5,11 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>مدیریت کتابخانه</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="dashboard">داشبورد</a>
       <a mat-list-item routerLink="librarians">کتابداران</a>
       <a class="r" mat-list-item routerLink="books">کتابها</a>
       <a mat-list-item routerLink="members">اعضا</a>
       <a mat-list-item routerLink="borrows">امانات</a>
-      <a mat-list-item (click)="signout()">خروج</a>
+      <a mat-list-item (click)="signout()"> <img src="assets\exit-svgrepo-com (1).svg" alt="exit" width="15" height="15"> خروج </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -24,7 +23,7 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>کتابخانه دانشگاه صنعتی همدان</span>
+      <span></span>
     </mat-toolbar>
     <div class="content">
       <router-outlet></router-outlet>

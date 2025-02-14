@@ -37,6 +37,8 @@ export class BookDetailsComponent extends DetailsComponent<BookAddRequest, BookE
       this.bookForm.controls.title.disable();
       this.bookForm.controls.writer.disable();
       this.bookForm.controls.price.disable();
+      this.bookForm.controls.category.disable();
+      this.bookForm.controls.imgPath.disable();
     }
   }
   override service = inject(BooksService);
@@ -45,6 +47,8 @@ export class BookDetailsComponent extends DetailsComponent<BookAddRequest, BookE
     title: [null, Validators.required],
     writer: [null, Validators.required],
     price: [null, Validators.required],
+    category: [null, Validators.required],
+    imgPath: [null, Validators.required],
   });
 
   button: any;

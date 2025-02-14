@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, inject, OnInit, Output } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButton, MatButtonModule } from '@angular/material/button';
@@ -26,6 +27,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
+
 export class HomeComponent {
   router = inject(Router);
   books = inject(HomeService);
@@ -46,7 +48,8 @@ export class HomeComponent {
       next: res => {
         this.busy = false;
         this.data = res as HomeResponse[];
-      }
+
+      }  
     });
   }
   next() {

@@ -5,7 +5,6 @@ import { adminsGuard } from './+shared/+services/guards/admins/admins.guard';
 import { BooksComponent } from './+pages/books/ui/books.component';
 import { MembersComponent } from './+pages/members/ui/members.component';
 import { BorrowsComponent } from './+pages/borrows/ui/borrows.component';
-import { DashboardComponent } from './+pages/dashboard/dashboard.component';
 import { LibrariansComponent } from './+pages/librarians/ui/librarians.component';
 import { HomeComponent } from './+pages/home/ui/home.component';
 import { WorkersComponent } from './+pages/workers/workers/workers.component';
@@ -20,16 +19,14 @@ export const routes: Routes = [
         {path:'books',component:BooksComponent},
         {path:'members',component:MembersComponent},
         {path:'borrows',component:BorrowsComponent},
-        {path:'dashboard',component:DashboardComponent},
         {path:'librarians',component:LibrariansComponent},
-        {path:'',redirectTo:'dashboard',pathMatch:'prefix'}
+        {path:'',redirectTo:'books',pathMatch:'prefix'}
     ]},
     {path:'workers',canActivate:[adminsGuard],component:WorkersComponent,children:[
         {path:'books',component:BooksComponent},
         {path:'members',component:MembersComponent},
         {path:'borrows',component:BorrowsComponent},
-        {path:'dashboard',component:DashboardComponent},
-        {path:'',redirectTo:'dashboard',pathMatch:'prefix'}
+        {path:'',redirectTo:'books',pathMatch:'prefix'}
     ]},
     {path:'',redirectTo:'home',pathMatch:'full'},
     {path:'**',redirectTo:'home'}

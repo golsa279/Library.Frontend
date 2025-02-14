@@ -1,23 +1,72 @@
+
+.login{
+  background-color: #1e4b8f !important;
+  width: 100px !important;
+  height: 50px !important;
+  margin: 37px 5px 10px 40px !important;
+  float: left !important;
+  color: white !important;
+  border-radius: 10px !important;
+
+}
+.mat-mdc-form-field{
+  background-color: #ffffff00 !important;
+  float: left !important;
+  width: 80% !important;
+  margin: 30px !important;
+  border-radius: 10px;
+  border: #1e4b8f;
+  border-width: 5px !important; 
+}
+
 .bar{
+  display: flex;
+  justify-content: space-between;
+}
+.icon{
+  margin: 10px 5px 30px 5px !important;
+}
+.serach{
+  margin: 40px !important;
+}
+
+.menu{
     display: block;
     width: auto;
-    background-color: rgba(0, 0, 255, 0.173);
-    height: 150px;
+    background-color: #d8d8d8;
+    height: 120px;
+    position: sticky;
+    margin: auto;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+}
+.serach{
+    left: 100px;
+    right: 100px;
 }
 table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 70%;
+    padding: 50px;
+    margin: auto;
   }
   
   table td, table th {
-    border: 1px solid #4591ef;
-    padding: 8px;
+    border: 1px solid #f2f2f2;
+    border-width: 5px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+
   }
   
-  table tr:nth-child(even){background-color: #e9e8e8;}
+  table tr:nth-child(even){background-color: #e9e8e8d4;}
+  table tr:nth-child(odd){background-color: #ecececf3;}
   
-  table tr:hover {background-color: #e5d2bf95;}
+  table tr:hover {background-color: #bababa;}
   
   table th {
     padding-top: 12px;
@@ -26,3 +75,27 @@ table {
     background-color: #1e4b8f;
     color: white;
   }
+
+img{
+  margin: 5px;
+
+}
+.button{
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 20px;
+  margin: auto;
+  background-color: #ffffff;
+  position: sticky;
+  bottom: 0;
+}
+.button button{
+  width: 10% !important;
+  height: 50px;
+  margin: 10px;
+}
+.page{
+  width: 5% !important;
+  margin: 10px !important;
+}
+

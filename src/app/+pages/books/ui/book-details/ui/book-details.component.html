@@ -9,7 +9,7 @@
           <mat-form-field class="full-width">
             <input matInput placeholder="عنوان" formControlName="title">
             @if (bookForm.controls['title'].hasError('required')) {
-              <mat-error>عنوان کتاب الزامی است</mat-error>
+            <mat-error>عنوان کتاب الزامی است</mat-error>
             }
           </mat-form-field>
         </div>
@@ -19,7 +19,7 @@
           <mat-form-field class="full-width">
             <input matInput placeholder="نویسنده" formControlName="writer">
             @if (bookForm.controls['writer'].hasError('required')) {
-              <mat-error>نویسنده کتاب الزامی است</mat-error>
+            <mat-error>نویسنده کتاب الزامی است</mat-error>
             }
           </mat-form-field>
         </div>
@@ -29,8 +29,25 @@
           <mat-form-field class="full-width">
             <input matInput placeholder="قیمت" formControlName="price">
             @if (bookForm.controls['price'].hasError('required')) {
-              <mat-error>قیمت کتاب الزامی است</mat-error>
+            <mat-error>قیمت کتاب الزامی است</mat-error>
             }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="دسته بندی" formControlName="category">
+            @if (bookForm.controls['category'].hasError('required')) {
+              <mat-error>دسته بندی کتاب الزامی است</mat-error>
+              }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="تصویر" formControlName="imgPath">
           </mat-form-field>
         </div>
       </div>

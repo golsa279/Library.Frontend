@@ -3,4 +3,6 @@ export interface HomeResponse{
     title:string;
     writer:string;
     price:number;
+    Category:string;
+    ImgPath:string;
 }
