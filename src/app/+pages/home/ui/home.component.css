@@ -1,6 +1,6 @@
 
 .login{
-  background-color: #1e4b8f !important;
+  background-color: #005cbb !important;
   width: 100px !important;
   height: 50px !important;
   margin: 37px 5px 10px 40px !important;
@@ -15,7 +15,7 @@
   width: 80% !important;
   margin: 30px !important;
   border-radius: 10px;
-  border: #1e4b8f;
+  border: #005cbb;
   border-width: 5px !important; 
 }
 
@@ -33,8 +33,8 @@
 .menu{
     display: block;
     width: auto;
-    background-color: #d8d8d8;
-    height: 120px;
+    background-color: #f4f4f4;
+    height: 100px;
     position: sticky;
     margin: auto;
     margin-bottom: 40px;
@@ -50,7 +50,6 @@ table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 70%;
-    padding: 50px;
     margin: auto;
   }
   
@@ -72,7 +71,7 @@ table {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #1e4b8f;
+    background-color: #005cbb;
     color: white;
   }
 
@@ -83,19 +82,39 @@ img{
 .button{
   display: flex !important;
   justify-content: center !important;
-  margin-top: 20px;
+  margin-top: 10px;
   margin: auto;
-  background-color: #ffffff;
+  background-color: #f4f4f4;
   position: sticky;
-  bottom: 0;
+  bottom: 0px;
+  width: 70%;
 }
 .button button{
   width: 10% !important;
-  height: 50px;
-  margin: 10px;
+  height: 40px;
+  margin-top: 10px;
+} 
+.button mat-form-field{
+  width: 10% !important;
+  height: 60px !important;
+  margin-bottom: 0 !important; 
 }
 .page{
   width: 5% !important;
   margin: 10px !important;
 }
-
+.imgback{
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  overflow: hidden;
+  margin: 0;
+  position: fixed;
+  z-index: -1;
+  top: 30px;
+  left: 0px;
+}
+.imgback img{
+  width: 100%;
+  height: 100%;
+}

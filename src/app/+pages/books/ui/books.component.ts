@@ -23,7 +23,7 @@ export class BooksComponent extends CrudComponent<BookAddRequest,BookEditRequest
   columns: GridColumn[] = [
     { field: 'title', title: 'عنوان' },
     { field: 'writer', title: 'نویسنده' },
-    { field: 'price', title: 'قیمت' },
+    { field: 'price', title: 'تعداد' },
     {field: 'category', title:'دسته بندی'},
     {field: 'imgPath', title:'تصویر'}
   ];

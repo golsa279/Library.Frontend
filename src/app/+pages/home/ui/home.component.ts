@@ -20,6 +20,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { BorrowsService } from '../../borrows/services/borrows.service';
+import { BorrowsComponent } from '../../borrows/ui/borrows.component';
+
 
 @Component({
   selector: 'app-home',
@@ -28,9 +31,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   styleUrl: './home.component.css'
 })
 
-export class HomeComponent {
+export class HomeComponent{
   router = inject(Router);
   books = inject(HomeService);
+  borrows = inject(HomeService);
   page = 0;
   size = 5;
   keyword: string = '';
@@ -48,9 +52,9 @@ export class HomeComponent {
       next: res => {
         this.busy = false;
         this.data = res as HomeResponse[];
-
       }  
     });
+
   }
   next() {
     this.page++;

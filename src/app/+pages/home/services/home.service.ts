@@ -9,5 +9,6 @@ export class HomeService {
    backend = inject(BackendService);
       list(request:HomePageRequest) {
           return this.backend.post(`api/books/list`,request);
+          
       }
 }

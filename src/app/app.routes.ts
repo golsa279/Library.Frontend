@@ -9,9 +9,11 @@ import { LibrariansComponent } from './+pages/librarians/ui/librarians.component
 import { HomeComponent } from './+pages/home/ui/home.component';
 import { WorkersComponent } from './+pages/workers/workers/workers.component';
 import { Auth2Component } from './+pages/auth2/ui/auth2.component';
+import { WelcomeComponent } from './+pages/welcome/welcome.component';
 
 
 export const routes: Routes = [
+    {path:'welcome',component:WelcomeComponent},
     {path:'home',component:HomeComponent},
     {path:'login-admins',component:AuthComponent},
     {path:'login-workers',component:Auth2Component},
@@ -28,6 +30,6 @@ export const routes: Routes = [
         {path:'borrows',component:BorrowsComponent},
         {path:'',redirectTo:'books',pathMatch:'prefix'}
     ]},
-    {path:'',redirectTo:'home',pathMatch:'full'},
-    {path:'**',redirectTo:'home'}
+    {path:'',redirectTo:'welcome',pathMatch:'full'},
+    {path:'**',redirectTo:'welcome'}
 ];

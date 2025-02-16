@@ -1,3 +1,5 @@
+
+<div class="imgback"><img src="assets\best-books-of-the-21st-century.webp" alt=""></div>
 <div class="menu">
   <div class="bar">
     <img class="icon" src="assets\book-svgrepo-com.svg" alt="book">
@@ -39,16 +41,14 @@
       <th>تصویر</th>
       <th>عنوان کتاب</th>
       <th>نویسنده</th>
-      <th>قیمت</th>
-      <th>دسته بندی</th>
+      <th>تعداد</th>
     </tr>
     @for (item of data; track $index) {
     <tr>
-      <td><img src="assets\d684d96f-7e6b-4dfd-b6c3-a9c3b9136db5.jpg" alt="book" width="150" height="150"></td>
+      <td><img src="assets\d684d96f-7e6b-4dfd-b6c3-a9c3b9136db5.webp" alt="book" width="150" height="150"></td>
       <td>{{item.title}}</td>
       <td>{{item.writer}}</td>
       <td>{{item.price}}</td>
-      <td>{{item.Category}}</td>
     </tr>
     }
   </table>

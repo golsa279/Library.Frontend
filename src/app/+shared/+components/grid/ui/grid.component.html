@@ -1,3 +1,4 @@
+
 <div>
     <mat-form-field>
         <mat-label>کلیدواژه</mat-label>
@@ -42,8 +43,6 @@
     }
 </table>
 <div class="button">
-    <button [disabled]="page==0" (click)="prev()" mat-flat-button>قبلی</button>
-    <button [disabled]="(data?.length??0)<size" (click)="next()" mat-flat-button>بعدی</button>
     <mat-form-field>
         <mat-label>تعداد</mat-label>
         <select [(ngModel)]="size" (ngModelChange)="pageChange()" matNativeControl required title="size">
@@ -52,4 +51,7 @@
           <option>20</option>
         </select>
       </mat-form-field>
+    <button [disabled]="page==0" (click)="prev()" mat-flat-button>قبلی</button>
+    <button [disabled]="(data?.length??0)<size" (click)="next()" mat-flat-button>بعدی</button>
+
 </div>

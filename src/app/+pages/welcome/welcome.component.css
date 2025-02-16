@@ -1,0 +1,64 @@
+
+.menu{
+    background-color: rgb(205, 205, 205);
+    bottom: 10px;  
+    border-radius: 15px; 
+    box-shadow:  50px 50px rgb(26, 36, 89);
+    box-shadow: 20px 20px grey;
+    padding: 40px;
+ 
+
+}
+.imgback{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    margin: 0;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+
+  }
+  .imgback img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .s{
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    border-radius: 70px;
+    top: 100px;
+  }
+  .s button{
+    border-radius: 70px;
+    margin: auto;
+    width: 30%;
+    height: 80px;
+    float: left;
+    margin-left: 80px;
+    font-size: large;
+    font-weight: bolder;
+  }
+  .s button:hover{
+    background-color: gainsboro;
+  }
+  .s div{
+    margin: auto;
+  }
+  .p{
+    color: white;
+    float: left;
+    position: relative;
+    top:150px;
+    left: 10%;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(6, 6, 50);
+    
+  }
